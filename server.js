@@ -8,11 +8,11 @@ const PORT = 3000;
 const mysql = require('mysql2');
 
 const db = mysql.createConnection({
-  host: '10.100.30.129',
+  host: '10.100.65.136',
   user: 'root',
-  password: 'RPSaod42227',
-  database: 'empada_e_lanches'
-
+  password: 'QYMgkk42949',
+  database: 'empada_e_lanches',
+});
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -36,6 +36,7 @@ app.post('/consulta', (req, res) => {
 });
 
 // Inicia o servidor
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor rodando`);
 });
+
